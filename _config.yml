@@ -1,6 +1,11 @@
 title: Learn LLM
 author: li.luo
 
+exclude_patterns:
+  - .venv
+  - "**.ipynb_checkpoints"
+  - _build
+
 execute:
   execute_notebooks: "off"
 
