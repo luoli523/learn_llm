@@ -31,7 +31,7 @@ jobs:
           pip install -e .
 
       - name: Build book
-        run: python -m jupyter_book build . --verbose
+        run: python -m jupyter_book build .
 
       - name: Verify output
         run: |
