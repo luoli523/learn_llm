@@ -11,11 +11,8 @@ echo "==> Installing dependencies..."
 .venv/bin/pip install --upgrade pip -q
 .venv/bin/pip install -r requirements.txt -q
 
-# Add repo root to Python path so notebooks can do:
-#   from utils.llm_client import chat
-SITE_PACKAGES=$(.venv/bin/python -c "import site; print(site.getsitepackages()[0])")
-echo "$REPO_ROOT" > "$SITE_PACKAGES/learn_llm.pth"
-echo "==> Repo root added to Python path via .pth"
+echo "==> Installing utils package (editable)..."
+.venv/bin/pip install -e . -q
 
 echo "==> Setting up .env..."
 if [ ! -f .env ]; then
