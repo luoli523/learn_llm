@@ -13,3 +13,5 @@ parts:
   - caption: Prompting 技术
     chapters:
       - file: chapters/02_prompting/01_zero_few_shot
+      - file: chapters/02_prompting/02_chain_of_thought
+      - file: chapters/02_prompting/03_structured_output
