@@ -2,8 +2,8 @@
 litellm>=1.50.0
 python-dotenv>=1.0.0
 
-# Jupyter Book (static site generator)
-jupyter-book>=1.0.0
+# Jupyter Book (static site generator) — pin to v1, v2 has breaking CLI changes
+jupyter-book>=1.0.0,<2.0.0
 ghp-import>=2.1.0
 
 # Notebooks
