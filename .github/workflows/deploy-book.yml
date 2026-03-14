@@ -29,7 +29,16 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build book
-        run: python -m jupyter_book build .
+        run: python -m jupyter_book build . --verbose
+
+      - name: Verify output
+        run: |
+          if [ ! -d "_build/html" ]; then
+            echo "ERROR: _build/html not found. Build likely failed."
+            ls -la _build/ || echo "_build/ does not exist either."
+            exit 1
+          fi
+          echo "Build output OK: $(find _build/html -name '*.html' | wc -l) HTML files"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
