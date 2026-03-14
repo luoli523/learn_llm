@@ -41,7 +41,7 @@ def chat(
     *,
     system: str | None = None,
     temperature: float = 0.7,
-    max_tokens: int = 1024,
+    max_tokens: int = 4096,
     **kwargs,
 ) -> str:
     """Single-turn chat. Returns the full response as a string."""
@@ -61,7 +61,7 @@ def stream_chat(
     *,
     system: str | None = None,
     temperature: float = 0.7,
-    max_tokens: int = 1024,
+    max_tokens: int = 4096,
     **kwargs,
 ) -> Generator[str, None, None]:
     """Single-turn streaming chat. Yields text chunks as they arrive."""
@@ -84,7 +84,7 @@ def multi_turn_chat(
     messages: list[dict],
     *,
     temperature: float = 0.7,
-    max_tokens: int = 1024,
+    max_tokens: int = 4096,
     **kwargs,
 ) -> str:
     """
