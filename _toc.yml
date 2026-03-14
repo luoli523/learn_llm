@@ -7,3 +7,4 @@ parts:
   - caption: 基础概念 Foundations
     chapters:
       - file: chapters/01_foundations/01_tokens
+      - file: chapters/01_foundations/02_embeddings
