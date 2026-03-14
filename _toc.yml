@@ -4,3 +4,6 @@ parts:
   - caption: 环境配置 Setup
     chapters:
       - file: chapters/00_setup/verify
+  - caption: 基础概念 Foundations
+    chapters:
+      - file: chapters/01_foundations/01_tokens
